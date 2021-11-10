@@ -22,7 +22,7 @@ class SignUpForm extends StatelessWidget {
         children: [
           TextFieldName(text: "Username"),
           TextFormField(
-            decoration: InputDecoration(hintText: "theflutterway"),
+            decoration: InputDecoration(hintText: "User"),
             validator: RequiredValidator(errorText: "Username is required"),
             // Let's save our username
             onSaved: (username) => _userName = username!,
@@ -34,8 +34,8 @@ class SignUpForm extends StatelessWidget {
           TextFieldName(text: "Email"),
           TextFormField(
             keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(hintText: "test@email.com"),
-            validator: EmailValidator(errorText: "Use a valid email!"),
+            decoration: InputDecoration(hintText: "Email"),
+            validator: EmailValidator(errorText: "Validate Email"),
             onSaved: (email) => _email = email!,
           ),
           const SizedBox(height: defaultPadding),
@@ -43,7 +43,7 @@ class SignUpForm extends StatelessWidget {
           // Same for phone number
           TextFormField(
             keyboardType: TextInputType.phone,
-            decoration: InputDecoration(hintText: "+123487697"),
+            decoration: InputDecoration(hintText: "Phone number"),
             validator: RequiredValidator(errorText: "Phone number is required"),
             onSaved: (phoneNumber) => _phoneNumber = phoneNumber!,
           ),

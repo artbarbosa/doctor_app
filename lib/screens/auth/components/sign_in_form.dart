@@ -24,8 +24,8 @@ class SignInForm extends StatelessWidget {
           TextFieldName(text: "Email"),
           TextFormField(
             keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(hintText: "test@email.com"),
-            validator: EmailValidator(errorText: "Use a valid email!"),
+            decoration: InputDecoration(hintText: "Email"),
+            validator: EmailValidator(errorText: "Valid Email"),
             onSaved: (email) => _email = email!,
           ),
           const SizedBox(height: defaultPadding),
